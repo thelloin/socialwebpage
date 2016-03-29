@@ -1,0 +1,157 @@
+<h1>Admin</h1>
+<p>
+	<a href="#/">Home</a><br />
+	<a href="#/" ng-click="logout()">Logout</a>
+</p>
+<h2>User List</h2>
+<ul>
+	
+</ul>
+
+
+<div class="off-canvas-wrap" data-offcanvas>
+
+  <div class="inner-wrap">
+    
+    <nav class="tab-bar">
+      <section class="left-small">
+        <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+      </section>
+
+      <section class="middle tab-bar-section">
+        <h1 class="title">Socialize</h1>
+      </section>
+
+      <section class="right-small">
+        <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
+      </section>
+    </nav>
+    <div class="row" id="testet">
+    </div>
+
+    <aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li><label>Menu</label></li>
+	
+        <li class="has-submenu" id="submenu-top"><a href="#">New post</a>
+	  <ul class="left-submenu">
+            <li class="back"><a href="#">Back</a></li>
+            <li><label id="new_post">What would you like to do:</label></li>
+            <li><a href="#">Blog</a></li>
+	    <li><a href="#">Picture</a></li>
+	  </ul>
+	</li>
+	<li><a href="#">Feed</a></li>
+	<li><a href="#">Blog</a></li>
+	<li><a href="#">Portfolio</a></li>
+	<li><a href="#">Profile</a></li>
+	<li><a href="#">Settings</a></li>
+	<li><a href="#/logout">Log out</a></li>
+      </ul>
+    </aside>
+
+    <aside class="right-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li><label>Users</label></li>
+	<li ng-repeat="u in users">{{u.name}}</li>
+      </ul>
+    </aside>
+    
+
+    <section class="main-section">
+      
+      <!-- content goes here -->
+      <div class="large-3 columns" id="profile_area">
+	
+	<div class="panel">
+	  <a href="#"><img src="emil.jpg"/></a>
+	  <h5><a href="#">Emil Nilsson</a></h5>
+	  <div class="section-container vertical-nav" data-section data-options="deep_linking: false; one_up: true">
+	    <section class="section">
+	      <h5 class="title"><a href="#">Example link 1</a></h5>
+	    </section>
+	    <section class="section">
+	      <h5 class="title"><a href="#">Example link 2</a></h5>
+	    </section>
+	  </div>
+	</div>
+      </div>
+      
+
+      <div class="large-9 small-12 columns">
+	
+	<div class="row">
+	  
+	  <ul class="large-9 button-group even-3">
+	    <li><a href="#" class="button secondary">Blog</a></li>
+	    <li><a href="#" class="button secondary">Feed</a></li>
+	    <li><a href="#" class="button secondary">Portfolio</a></li>
+	  </ul>
+	  
+
+	  
+	</div>
+	<hr/>
+	<div class="row">
+	  <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]"/></div>
+	  <div class="large-10 columns">
+	    <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
+	    <ul class="inline-list">
+	      <li><a href="">Reply</a></li>
+	      <li><a href="">Share</a></li>
+	    </ul>
+	    <h6>2 Comments</h6>
+	    <div class="row">
+	      <div class="large-2 columns small-3"><img src="http://placehold.it/50x50&text=[img]"/></div>
+	      <div class="large-10 columns"><p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p></div>
+	    </div>
+	    <div class="row">
+	      <div class="large-2 columns small-3"><img src="http://placehold.it/50x50&text=[img]"/></div>
+	      <div class="large-10 columns"><p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p></div>
+	    </div>
+	  </div>
+	</div>
+	
+	<hr/>
+	
+	<div class="row">
+	  <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]"/></div>
+	  <div class="large-10 columns">
+	    <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
+	    <ul class="inline-list">
+	      <li><a href="">Reply</a></li>
+	      <li><a href="">Share</a></li>
+	    </ul>
+	  </div>
+	</div>
+	
+	<hr/>
+	
+	<div class="row">
+	  <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]"/></div>
+	  <div class="large-10 columns">
+	    <p><strong>Some Person said:</strong> Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong.</p>
+	    <ul class="inline-list">
+	      <li><a href="">Reply</a></li>
+	      <li><a href="">Share</a></li>
+	    </ul>
+	    <h6>2 Comments</h6>
+	    <div class="row">
+	      <div class="large-2 columns small-3"><img src="http://placehold.it/50x50&text=[img]"/></div>
+	      <div class="large-10 columns"><p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p></div>
+	    </div>
+	  </div>
+	</div>
+	
+      </div>
+      
+
+      
+      <aside class="large-3 columns hide-for-small">
+      </aside>
+    </section>
+    <a class="exit-off-canvas"></a>   
+  </div>
+ 
+  
+</div>

@@ -1,0 +1,29 @@
+<div class="joyride-tip-guide" ng-class="{ in: isOpen(), fade: animation() }">
+  <span class="joyride-nub" ng-class="{
+				      bottom: placement === 'top',
+				      left: placement === 'right',
+				      right: placement === 'left',
+				      top: placement === 'bottom'
+				      }"></span>
+  <div class="joyride-content-wrapper" style="height: 250px; overflow-y: scroll;">
+    <h4 ng-bind="title" ng-show="title"></h4>
+
+    <p ng-repeat="m in $parent.chat.messages" style="margin: 0;">{{m.text}}</p>
+  </div>
+  <div class="joyride-content-wrapper">
+    <ul></ul>
+    <div class="large-12">
+      <div class="row collapse">
+	<div class="small-9 columns">
+	  <input id="chatInput" ng-model="$parent.message.text" type="text"  class="form-control">
+	</div>
+	<div class="small-3 columns">
+	  <button id="sendChatButton" class="button small prefix" ng-click="$parent.sendMessage($parent.chat.otherid)">Send</a>
+	 
+	</div>
+      </div>
+    </div>
+    
+    
+  </div>
+</div>

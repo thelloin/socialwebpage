@@ -1,0 +1,163 @@
+body {
+
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+}
+
+#coloren {
+    background: white;
+}
+
+
+
+a {
+  color: #00B7FF;
+}
+input[data-toggle] {
+    display: none;
+  }
+
+input[data-toggle]:checked + label,
+input[data-toggle]:checked + label:active {
+  background-color: lightgray;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0) inset, 0 0px 0px rgba(0, 0, 0, 0); }
+
+.button-group.toggle li:not(first-child) {
+  margin: 0 -0.9rem;
+  
+}
+
+.button {
+    font-weight:bold;
+    color: white;
+    background-color: #008CBA;
+
+
+}
+
+
+#r1 {
+    border-right: 1px solid #333333 !important;
+}
+
+
+
+.tab-bar h1 {
+
+    color: white;
+   
+
+}
+
+.main-section {
+
+    margin-top: 5px;
+}
+
+#testet {
+  
+    margin-bottom: 10px;
+    border-top: 2px solid black;
+}
+
+/*
+
+******Canvas menu customization below******
+  
+*/
+
+.left-off-canvas-menu {
+    background-color: #008CBA;
+    font-weight: bold;
+
+
+    
+}
+
+.right-off-canvas-menu {
+    background-color: #008CBA;
+    
+    
+}
+ul.off-canvas-list li a:hover {
+      background: #007095;
+}
+ul.off-canvas-list li a:active {
+      background: #007095;
+      
+}
+
+ul.off-canvas-list li label {
+    border-bottom: 2px solid #333333;
+    border-top:none;
+    
+    padding-top: 15px;
+    padding-bottom: 12px;
+    
+    color: white;
+    background: #008CBA;
+}
+
+ul.off-canvas-list li a {
+    color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 0;
+  
+}
+
+.has-submenu {
+
+}
+
+#submenu-top {
+    padding-top: 16px;
+    padding-bottom: 0px;
+    border-bottom: 1px solid black;
+
+}
+
+.left-submenu {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #333333;
+    background-color: #FFFFFF;
+    
+}
+
+.back {
+    padding-top: 14px;
+    padding-bottom: 12px;
+    background-color: #008CBA;
+    cursor: pointer;
+    display: block;
+    font-size: 0.875rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+#new_post {
+    text-transform: none;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+
+.login-box {
+  background: #fff;
+  border: 1px solid #ddd; 
+  margin: 100px 0;
+  padding: 40px 20px 0 20px;
+}
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+
+
+

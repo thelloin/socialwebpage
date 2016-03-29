@@ -1,0 +1,38 @@
+﻿<div>
+  <div class="inner-wrap">
+    
+    <nav class="tab-bar">
+
+
+      <section class="middle tab-bar-section">
+	<h1 class="title">Socialize</h1>
+      </section>
+
+
+    </nav>
+    <div class="row" id="testet">
+    </div>
+  </div>
+
+
+  <div class="large-4 large-centered columns">
+    <div ng-show="vm.error" class="">{{vm.error}}</div>
+    <form name="form" ng-submit="login()">
+      <div class="" ng-class="{ 'has-error': form.username.$dirty && form.username.$error.required }">
+	<label for="username">Username</label>
+	<input type="text" name="username" id="username" class="" ng-model="user.username" required />
+	<span ng-show="form.username.$dirty && form.username.$error.required" class="">Username is required</span>
+      </div>
+      <div class="" ng-class="{ 'has-error': form.password.$dirty && form.password.$error.required }">
+	<label for="password">Password</label>
+	<input type="password" name="password" id="password" class="" ng-model="user.password" required />
+	<span ng-show="form.password.$dirty && form.password.$error.required" class="">Password is required</span>
+      </div>
+      <div class="">
+	<button type="submit" ng-disabled="form.$invalid" class="button expand">Login</button>
+	<a href="#/register" class="button expand">Register</a>
+      </div>
+    </form>
+    {{message}}
+  </div>
+</div>

@@ -1,0 +1,35 @@
+{
+  "name": "socialwebpage",
+  "version": "1.0.0",
+  "description": "social webpage (tdp013)",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.ida.liu.se:tomli962/tdp013.git"
+  },
+  "author": "emini901 tomli962",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "connect-busboy": "0.0.2",
+    "connect-mongo": "^0.8.2",
+    "cookie-parser": "^1.4.0",
+    "cors": "^2.7.1",
+    "ejs": "^2.3.4",
+    "errorhandler": "^1.4.2",
+    "express": "^4.13.3",
+    "express-session": "^1.12.1",
+    "mongoose": "^4.2.4",
+    "morgan": "^1.6.1",
+    "passport": "^0.3.0",
+    "passport-local": "^1.0.0",
+    "passport.socketio": "^3.6.1",
+    "socket.io": "^1.3.7"
+  }
+}

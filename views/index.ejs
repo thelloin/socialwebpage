@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/foundation.css' />
+    <link rel='stylesheet' href='/stylesheets/styles.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="/javascripts/angular.min.js"></script>
+    <script type="text/javascript" src="/javascripts/angular-resource.min.js"></script>
+    <script type="text/javascript" src="/javascripts/angular-route.min.js"></script>
+    <script src="javascripts/mm-foundation.js"></script>
+    <script type="text/javascript" src="/javascripts/app.js"></script>
+    
+    <script src="/javascripts/socket.io.js"></script>
+
+  </head>
+  <body>
+
+    <div class="row" id="coloren">
+      <div ng-view>
+      </div>
+      <footer class="row">
+	<div class="large-12 columns">
+	  <hr/>
+	  <div class="row">
+	    <div class="large-5 columns">
+	      <p>&copy; Social webbplats</p>
+	    </div>
+	    <div class="large-7 columns">
+
+	    </div>
+	  </div>
+	</div>
+      </footer>
+    </div>  
+  </body>
+</html>
+
+

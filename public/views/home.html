@@ -1,0 +1,183 @@
+<div class="off-canvas-wrap" data-offcanvas>
+
+  <div class="inner-wrap" ng-style="resizeWithOffset(165)" resize notifier="notifyServiceOnChage(params)">
+
+    <nav class="tab-bar">
+      <section class="left-small">
+        <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+      </section>
+
+      <section class="middle tab-bar-section">
+	<a href="#/home"><h1 class="title">Socialize</h1></a>
+      </section>
+      <section class="right-small">
+        <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
+      </section>
+    </nav>
+
+    <div class="row" id="testet">
+    </div>
+    <div class="row">
+    </div>
+    <aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li><label>Menu</label></li>
+	<li><a href="#/home">Blog</a></li>
+	<li><a href="#/home">Portfolio</a></li>
+	<li><a href="#/home">Profile</a></li>
+	<li><a href="#/login" ng-click="logout()">Log out</a></li>
+      </ul>
+    </aside>
+    <aside class="right-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li><label>Friends</label></li>
+
+	<li ng-repeat="f in friends"><a ng-href="#/user?userid={{f.userid}}">{{f.name}}<i ng-click="$event.preventDefault(); startChat(f.userid, f.name)" style="float: right;" class="fa fa-comment"></i></a></li>
+      </ul>
+    </aside>
+    
+
+    <section class="main-section">
+      
+      <!-- content goes here -->
+      <div class="large-3 columns" id="profile_area">
+	
+	<div class="panel">
+	  <a><img src="/static/images/profilePic.png"/></a>
+	  <h5 ng-show="{{ home }}">{{ currentUser.firstname + " " + currentUser.lastname  }}</h5>
+	  <h5 ng-hide="{{ home }}">{{ Userinfo[0]  }}</h5>
+	  <div class="section-container vertical-nav" data-section data-options="deep_linking: false; one_up: true">
+	    <section class="section">
+	      <button class="button expand" ng-click="addFriend()" ng-show=" notFriend ">{{ "Add " + Userinfo[0] }}</button>
+	    </section>
+
+	  </div>
+	</div>
+	<div ng-show="home" class="large-12 columns">
+	  <div class="row collapse">
+	    <div class="small-9 columns">
+	      <input ng-model="searchText" type="text" placeholder="Find user" list="search">
+	      <datalist id="search">
+		<select>
+		  <option ng-repeat="u in users" value="{{u.name}}">
+		</select>
+	      </datalist>
+	    </div>
+	    <div class="small-3 columns">
+              <a class="button postfix" ng-click="getResults()">Go</a>
+            </div>
+	  </div>
+	</div>
+	<div class="large-12 columns">
+	  <ul ng-show="search" class="side-nav">
+	    <li class="heading">Results:</li>
+	    <li><a href="#/user?userid={{searchResult.userid}}">{{searchResult.name}}</a></li>	       
+	  </ul>
+	</div>
+	
+      </div>
+      
+
+      <div class="large-9 small-12 columns">
+	
+
+	<div class="large-12">
+	  <ul class="large-9 button-group even-2">
+	    <li><a ng-click="changeView(1)" class="button secondary">Posts</a></li>
+	    <li><a ng-click="changeView(0)" class="button secondary">Images</a></li>
+	    
+	    
+	  </ul>
+
+	</div>
+	<div ng-controller="PostCtrl" id="postContainer" ng-show="atPost === 1">
+	  <div class="large-12">
+	    <div class="large-9">
+	      
+	      <button class="button expand" ng-click="writePost()" ng-hide="home || notFriend">Write post</button>
+	      <div class="large-12" ng-show="newPost">
+		<textarea rows="5" placeholder="Write your message.." ng-model="posttext" style="resize:none;"></textarea>
+		<button class="button expand" ng-click="sendPost()">Send</button>
+	      </div>
+	    </div>
+	  </div>
+	  <hr/>
+	  <div class="row" ng-repeat="post in posts.slice().reverse()"> 
+	    <div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]"/></div>
+	    <div class="large-10 small-9 columns">
+	      <p><strong>{{ post.author }} said:</strong> {{ post.text }} </p>
+	      <ul class="inline-list">
+		<li><a href="">Reply</a></li>
+		<li><a href="">Share</a></li>
+	      </ul>
+
+	    </div>
+	    <hr/>
+	  </div>
+
+
+	  <!-- Remove comment and remember to add functionality for comments <h6>2 Comments</h6> -->
+	  <!--  <div class="row"> 
+		<div class="large-2 columns small-3"><img src="http://placehold.it/50x50&text=[img]"/></div>
+		<div class="large-10 columns"><p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit</p></div>
+	  </div> -->
+	</div>
+      
+	<div class="large-9">
+      	  <div ng-controller="ImageCtrl" id="imageContainer" ng-show="atPost === 0">
+	    <div class="large-12">
+	      <div class="large-9">   
+		<button class="button expand" ng-click="uploadImage()">Upload picture</button>
+		<div class="large-12" ng-show="newImage">
+		  <input type="file" name="file" id="file" file-model="myFile"/>
+		
+		  <button id="sendImage" class="button expand" ng-click="sendImage(myFile)">Send</button>
+		</div>
+	      </div>
+	    </div>
+	    <hr/>
+	    <div class="row">
+
+
+	      <div id="testar"></div>
+	      <div id="imageDiv" ng-repeat="image in images" class="large-4 columns small-3"><img ng-src="{{image}}"/></div>
+	     
+
+
+	    </div>
+	  </div>
+	</div>
+      </div>
+  
+      
+
+
+
+
+
+
+      
+
+      <aside class="large-3 columns hide-for-small">
+      </aside>
+    </section>
+ 
+    
+    
+    
+    <a class="exit-off-canvas"></a>      
+  </div>
+  <ul class="button-group radius">
+    <li>
+     
+	<div ng-controller="ChatCtrl" class="columns">
+
+	   <div class="form-group">
+	     <button style="margin-right: 5px; margin-left: 10px;"  ng-repeat="chat in chats" popover="{{chat.messages}}" popover-title="{{chat.name}}" class="button">{{chat.name}}</button>
+
+	</div>
+      </div>
+    </li>
+  </ul>
+  
+</div>
