@@ -1,3 +1,8 @@
+Frontend: HTML5, CSS3, Javascript, AngularJS, Foundation. (Använder bl.a. socketio, webworkers, form validation, någorlunda responsiv design. Fokus på funktionalitet)
+Backend: NodeJS/Express.
+DB: MongoDb, Mongoose used for MongoDb object modeling.
+Testing done with selenium, mocha and istanbul.
+
 Make sure you have a mongodb server running on port 27017 before running app.js with node.
 
 Selenium:
