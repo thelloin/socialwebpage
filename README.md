@@ -2,6 +2,7 @@ Frontend: HTML5, CSS3, Javascript, AngularJS, Foundation. (Använder bl.a. socke
 Backend: NodeJS/Express.
 DB: MongoDb, Mongoose used for MongoDb object modeling.
 Testing done with selenium, mocha and istanbul.
+Editor/IDE: emacs
 
 Make sure you have a mongodb server running on port 27017 before running app.js with node.
 
